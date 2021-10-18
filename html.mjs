@@ -3,12 +3,16 @@ import { createServer } from "http";
 // Create a local server to receive data from
 const server = createServer((request, response) => {
   console.log("request");
-  response.writeHead(200, { "Content-Type": "application/json" });
+  response.writeHead(200, {
+    "Content-Type": "text/html",
+  });
   response.end(
-    JSON.stringify({
-      data: "I AM JSON!",
-    })
+    `<html>
+    <body>
+      <h1>I AM HTML</h1>
+    </body>
+  </html>`
   );
 });
 
-server.listen(8000);
+server.listen(8500);
