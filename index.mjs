@@ -16,6 +16,6 @@ const timer = setInterval(() => {
   countdown--;
   if (countdown === -1) {
     console.log("countdown stopped");
-    process.exit(0);
+    process.exit(0); // this kills the process. or you can use clearIntervall(timer) to keep the process on but the timer stops
   }
 }, 1000);
